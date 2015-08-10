@@ -33,6 +33,18 @@
                 templateUrl: "BookDocDetail.html",
                 controller: "DoctorBookController"
             })
+            .when("/VCP", {
+                templateUrl: "VisitingCardPrint.htm",
+                controller: "VisitingCardController"
+            })
+            .when("/BC", {
+                templateUrl: "BookCAB.htm",
+                controller: "BookCABController"
+            })
+            .when("/HT", {
+                templateUrl: "HealthTips.htm",
+                controller: "HealthTipsController"
+            })
       .otherwise({ redirectTo: "/landing" });
     });
 
