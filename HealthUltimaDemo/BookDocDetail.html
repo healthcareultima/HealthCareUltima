@@ -4,10 +4,12 @@
         <div class="doc_photo">
             <img class="doc_avatar" src="Images/People-Doctor-Male-icon.jpg" style="display: inline;max-height:100px;">
         </div>
+        <input type="button" class="bookToggle" ng-click="BookAppointment();" style="font:14px;padding:10px 31px;margin-top:0;margin-left:60%" value="Book" />
         <div class="doctor-details-container">
             <div>
                 <h1>
-                    {{doctor.Name}}</h1>
+                    {{doctor.Name}}
+                </h1>
                 <p class="doctor-qualifications">
                     {{doctor.Qualifications}}
                 </p>
@@ -15,12 +17,15 @@
                     <span class="doctor-spec">{{doctor.Spec}} </span>,{{doctor.Exp}}
                 </h2>
                 <p class="recommend">
-                    {{doctor.Rating}}<span> Recommendations</span></p>
+                    {{doctor.Rating}}<span> Recommendations</span>
+                </p>
             </div>
         </div>
         <div class="doctor-summary">
-            <span>{{doctor.Name}} is an {{doctor.Spec}} has an experience of {{doctor.Exp}} years
-                in this field. {{doctor.Name}} practices at {{doctor.Clinic}} </span>
+            <span>
+                {{doctor.Name}} is an {{doctor.Spec}} has an experience of {{doctor.Exp}} years
+                in this field. {{doctor.Name}} practices at {{doctor.Clinic}}
+            </span>
         </div>
     </div>
     <div class="profile-nav-container">
@@ -33,12 +38,14 @@
             <div class="clinic-block listing-row">
                 <div class="clinic-locality">
                     <h2 class="clinic-region">
-                        {{doctor.ClinicDet.Region}}</h2>
+                        {{doctor.ClinicDet.Region}}
+                    </h2>
                     <span>,{{doctor.ClinicDet.City}}</span>
                 </div>
                 <div class="clinic-address">
                     <h2>
-                        {{doctor.ClinicDet.Name}}</h2>
+                        {{doctor.ClinicDet.Name}}
+                    </h2>
                     <p class="clinic-street-address">
                         <span>{{doctor.ClinicDet.DetailedAdress}}</span>
                     </p>
@@ -46,9 +53,11 @@
                 <div class="clinic-timings">
                     <div class="clinic-timings-wrapper" ng-repeat="timing in doctor.Timing">
                         <p class="clinic-timings-day">
-                            {{timing.Day}}</p>
+                            {{timing.Day}}
+                        </p>
                         <p class="clinic-timings-session">
-                            {{timing.TIME}}</p>
+                            {{timing.TIME}}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -59,13 +68,15 @@
                     <div class="doc-info-section-column">
                         <div class="doc-info-section specialties-block">
                             <h3 class="specialities">
-                               <span class="speciality-label">Specialization</span></h3>
+                                <span class="speciality-label">Specialization</span>
+                            </h3>
                             <p class="speciality-row">
-                                {{doctor.Spec}}</p>
+                                {{doctor.Spec}}
+                            </p>
                         </div>
                         <div class="doc-info-section qualifications-block">
                             <h3 class="qualifications profile-section-collapsed">
-                               <span class="qualifications-label">Education</span> 
+                                <span class="qualifications-label">Education</span>
                             </h3>
                             <p class="qualifications-row" ng-repeat="qual in doctor.Qualifications.split(',')">{{qual}}</p>
                             <!--<p class="qualifications-row" ng-repeat="qual in ">{{qual}}</p>-->
@@ -75,4 +86,23 @@
             </div>
         </div>
     </div>
+</div>
+<div class="suggestions">
+    <table border="0">
+        <tr ng-repeat="doc in relatedDocs|orderBy:'-Rating'">
+            <td>
+                <div class="doc-list">
+                    <div class="doc_photo">
+                        <img class="doc_avatar" src="Images/People-Doctor-Male-icon.jpg" style="display: inline;max-height:100px;">
+                    </div>
+                    <div class="doc-sugg-details">
+                        <p>{{doc.Name}}</p>
+                        <p>{{doc.Clinic}}</p>
+                        <p class="recommend" style="padding-top:20%;margin-left:35%;">{{doc.Rating}} <span> Recommendations</span></p>
+                        <input type="button" class="bookToggle" ng-click="setDocService(doc)" style="font:14px;padding:10px 31px;margin-top:0" value="Book Appointment" />
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
 </div>

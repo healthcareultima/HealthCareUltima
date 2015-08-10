@@ -404,3 +404,19 @@ h3.qualifications
     vertical-align: baseline;
 
 }
+.suggestions {
+    float:right;
+    vertical-align:baseline;
+}
+.doc-list {
+    height:200px !important;
+    border: 2px solid;
+    margin-bottom:10px;
+    padding:5px;
+    text-align:left;
+    vertical-align:baseline;
+}
+.doc-sugg-details{
+    padding-top:10%;
+    margin-left:0;
+}

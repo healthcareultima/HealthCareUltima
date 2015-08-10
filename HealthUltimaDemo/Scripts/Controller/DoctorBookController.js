@@ -1,6 +1,6 @@
 ﻿(function () {
     var app = angular.module("HealthApp");
-    var DoctorBookController = function ($scope, doctorService) {
+    var DoctorBookController = function ($scope, $location, doctorService) {
         $scope.clinics = [
          {
              Name: "Ortho & Joint Clinic", Region: "Baguihati", City: "Kolkata", DetailedAdress: "#13, 4th Main, 8th Mile, Baguihati Landmark: Opp. Big Bazaar, Kolkata"
@@ -16,6 +16,15 @@
          }
         ];
         $scope.doctor = doctorService.getDoctorData($scope.clinics);
+        $scope.relatedDocs = doctorService.getRelatedDoctors();
+        $scope.setDocService = function (doc) {
+            doctorService.setDoctorData(doc);
+            $scope.doctor = doctorService.getDoctorData($scope.clinics);
+            $scope.relatedDocs = doctorService.getRelatedDoctors();
+        };
+        $scope.BookAppointment = function () {
+            alert("Your appointment with " + $scope.doctor.Name + " is in Progress..You will be redirected to payment gateway");
+        }
         
     };
     app.controller("DoctorBookController", DoctorBookController);
