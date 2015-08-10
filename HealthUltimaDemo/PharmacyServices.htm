@@ -22,14 +22,14 @@
 <div class="searchDiv" style="display:none">
     <ul>
         <li>
-            <input type="text" placeholder="Drug/Generic Name" />
-            <input type="text" placeholder="Qty" />
-            <input type="text" placeholder="Price" />
+            <input type="text" placeholder="Drug/Generic Name" class="drugText" />
+            <input type="text" placeholder="Qty" class="drugText" />
+            <input type="text" placeholder="Price" class="drugText" />
         </li>
     </ul>
 </div>
 <div class="StoreLocator" style="display:none">
-    <input type="number" placeholder="Mention Radius (in Km)" id="radius" ng-blur="InitializeMap()" />    
+    <input type="number" class="distance" placeholder="Mention Radius (in Km)" id="radius" ng-blur="InitializeMap()" />    
     <input type="button" class="GeneralButton" value="Driving" ng-click="ShowRoute()" />
 </div>
 <div id="mapCanvas"></div>

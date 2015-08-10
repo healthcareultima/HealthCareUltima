@@ -17,7 +17,7 @@
             });
         }
         $scope.AddNew = function () {
-            $('.searchDiv ul').append('<li><input type="text" placeholder="Drug/Generic Name" /><input type="text" placeholder="Qty" /><input type="text" placeholder="Price" /></li> ');
+            $('.searchDiv ul').append('<li><input type="text" placeholder="Drug/Generic Name" class="drugText" /><input type="text" placeholder="Qty" class="drugText" /><input type="text" placeholder="Price" class="drugText" /></li> ');
 
         }
         $scope.LocateStore = function (ctrl) {
@@ -37,6 +37,7 @@
                 $('.searchDiv').css("display", "block");
                 $('.Order').css("display", "block");
                 $('.StoreLocator').css("display", "none");
+                $('#mapCanvas').css("display", "none");
             }
             else {
                 $('.Undeliverable').css("display", "block");
@@ -44,6 +45,7 @@
                 $('.searchDiv').css("display", "none");
                 $('.Order').css("display", "none");
                 $('.StoreLocator').css("display", "none");
+                $('#mapCanvas').css("display", "block");
             }
         }
 

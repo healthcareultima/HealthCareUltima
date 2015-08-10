@@ -33,6 +33,12 @@
             doctorService.setDoctorData(doc);
             $location.path("/DDTL")
         };
+
+        $scope.specialities = ["TSH", "Fasting", "PP","Lipid Profile","Creatine"];
+        $scope.speciality = "";
+        $("#testName").autocomplete({
+            source: $scope.specialities
+        });
     };
   
     app.controller("SampleCollController", SampleCollController);
