@@ -34,10 +34,10 @@
             $location.path("/DDTL")
         };
 
-        $scope.specialities = ["TSH", "Fasting", "PP","Lipid Profile","Creatine"];
-        $scope.speciality = "";
+        $scope.tests = ["TSH", "Fasting", "PP","Lipid Profile","Creatine"];
+        $scope.test = "";
         $("#testName").autocomplete({
-            source: $scope.specialities
+            source: $scope.tests
         });
     };
   

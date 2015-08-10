@@ -28,6 +28,11 @@
             $scope.InitializeMap();
         }
 
+        $scope.OpenFile=function()
+        {
+            $("input[name*='uploadFile']").trigger('click');
+        }
+
         $scope.CheckDelivery = function () {
 
             var pinCode = $('#pinCode').val();
@@ -48,7 +53,11 @@
                 $('#mapCanvas').css("display", "block");
             }
         }
-
+        $scope.drugs = ["Crocin", "Calpol", "Pan D", "Rantac", "Omege"];
+        $scope.drug = "";
+        $("#drugGenName").autocomplete({
+            source: $scope.drugs
+        });
 
 
 
@@ -124,7 +133,7 @@
 
         $scope.ShowRoute=function()
         {
-            alert('ShowRoute');            
+                        
             var request = {
                 origin: src,
                 destination: dest,
