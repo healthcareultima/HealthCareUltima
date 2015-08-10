@@ -137,7 +137,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\HealthCareUltima - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\HealthCareUltima - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\HealthCareUltima - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\HealthCareUltima - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
