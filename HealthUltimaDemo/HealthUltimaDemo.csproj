@@ -19,6 +19,11 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,6 +64,7 @@
     <Content Include="DocAppt.htm" />
     <Content Include="EmergencyServices.htm" />
     <Content Include="HealthOptions.htm" />
+    <Content Include="HealthTips.htm" />
     <Content Include="Images\People-Doctor-Male-icon.jpg" />
     <Content Include="Images\People-Doctor-Male-icon.png" />
     <Content Include="Images\samplecollection-sm.png" />
@@ -70,11 +76,14 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\Controller\AdmissionController.js" />
+    <Content Include="Scripts\Controller\BookCABController.js" />
     <Content Include="Scripts\Controller\DoctorBookController.js" />
     <Content Include="Scripts\Controller\DoctorController.js" />
     <Content Include="Scripts\Controller\EmergencyController.js" />
+    <Content Include="Scripts\Controller\HealthTipsController.js" />
     <Content Include="Scripts\Controller\OtherController.js" />
     <Content Include="Scripts\Controller\PharmacyController.js" />
+    <Content Include="Scripts\Controller\VisitingCardController.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
@@ -88,6 +97,8 @@
     <Content Include="Styles\jquery-ui.min.css" />
     <Content Include="Styles\MainCSS.css" />
     <Content Include="Styles\PharmacyService.css" />
+    <Content Include="Styles\SampleCollection.css" />
+    <Content Include="VisitingCardPrint.htm" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

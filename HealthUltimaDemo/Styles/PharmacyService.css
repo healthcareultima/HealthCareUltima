@@ -8,6 +8,8 @@
     zoom: 1;
     *display: inline;
     float: left;
+    width:100%;
+    min-width:100%;
     /* this fix is needed for IE7- */
 }
 .Deliverable span{
@@ -25,10 +27,14 @@
 }
 .checkDelivery{
     margin:auto;
+    width:90%;
+    min-width:90%;
 }
 
 .searchDiv{
     margin:auto;
+    width:90%;
+    min-width:90%;
 }
 .Order{
     width:100%;    
@@ -37,6 +43,27 @@
 }
 #mapCanvas{   
     width: 100%;    
-    position: absolute; 
+    position: relative; 
     height: 400px;
+}
+#pinCode
+{
+    width:100%;
+    min-width:100%;
+}
+.drugText
+{
+    width:25%;
+    min-width:25%;
+}
+.StoreLocator
+{
+    width:90%;
+    min-width:90%;
+    margin:auto;
+}
+.distance
+{
+     width:90%;
+    min-width:90%;
 }

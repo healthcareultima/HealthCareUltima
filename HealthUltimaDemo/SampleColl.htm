@@ -1,1 +1,37 @@
-﻿<p>{{message}}</p>
+﻿<link rel="stylesheet" type="text/css" href="Styles/SampleCollection.css" />
+<p>{{message}}</p>
+
+<div class="Test">
+    <input type="text" placeholder="Enter Test Name" id="testName" ng-blur="populateClinics()" />        
+</div>
+<div class="docResults" style="display:none">
+    <div class="doclist-row" ng-repeat="clinic in clinics">
+        <div class="docPhoto">
+            <img class="doc_avatar" src="Images/People-Doctor-Male-icon.jpg" style="display:inline" />
+        </div>
+        <div class="doc-details">
+            <a href="#" class="link doc-name snmokeliftDocLink">
+                <h2>{{clinic.Name}}</h2>
+            </a>
+            <p class="doc-qualifications">
+                {{clinic.locality}}
+            </p>
+            <p class="doc-specialities">
+                <span> {{clinic.fee}}</span>
+            </p>
+            <p class="doc-clinic-name">
+                <a class="light_grey" href="#" ng-click="openMapModal()" target="_self">View Map                   
+                </a>
+            </p>            
+        </div>
+        <div class="doc-availability-block">
+            <p class="recommend">
+                {{clinic.Rating}} <span>Recommends</span>
+            </p>           
+            <p class="fees">
+                {{clinic.fee}}
+            </p>           
+        </div>
+        <input type="button" class="bookToggle" ng-click="setDocService(doc)" value="Request Sample Collection" />
+    </div>
+</div>
