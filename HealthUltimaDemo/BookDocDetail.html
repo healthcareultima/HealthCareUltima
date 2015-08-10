@@ -1,0 +1,78 @@
+﻿<link href="Styles/DocMod.css" rel="stylesheet" />
+<div class="profile-Container">
+    <div class="profile-summary">
+        <div class="doc_photo">
+            <img class="doc_avatar" src="Images/People-Doctor-Male-icon.jpg" style="display: inline;max-height:100px;">
+        </div>
+        <div class="doctor-details-container">
+            <div>
+                <h1>
+                    {{doctor.Name}}</h1>
+                <p class="doctor-qualifications">
+                    {{doctor.Qualifications}}
+                </p>
+                <h2 class="doctor-specialities">
+                    <span class="doctor-spec">{{doctor.Spec}} </span>,{{doctor.Exp}}
+                </h2>
+                <p class="recommend">
+                    {{doctor.Rating}}<span> Recommendations</span></p>
+            </div>
+        </div>
+        <div class="doctor-summary">
+            <span>{{doctor.Name}} is an {{doctor.Spec}} has an experience of {{doctor.Exp}} years
+                in this field. {{doctor.Name}} practices at {{doctor.Clinic}} </span>
+        </div>
+    </div>
+    <div class="profile-nav-container">
+        <div class="profile-nav-tab-marker" style="width: 32px; left: 19px;">
+        </div>
+        <a id="infoNavLink" class="profile-nav-tab selected" href="javascript:void(0);">Info</a>
+    </div>
+    <div class="tabs" id="infoTab">
+        <div class="doctor-practice-container">
+            <div class="clinic-block listing-row">
+                <div class="clinic-locality">
+                    <h2 class="clinic-region">
+                        {{doctor.ClinicDet.Region}}</h2>
+                    <span>,{{doctor.ClinicDet.City}}</span>
+                </div>
+                <div class="clinic-address">
+                    <h2>
+                        {{doctor.ClinicDet.Name}}</h2>
+                    <p class="clinic-street-address">
+                        <span>{{doctor.ClinicDet.DetailedAdress}}</span>
+                    </p>
+                </div>
+                <div class="clinic-timings">
+                    <div class="clinic-timings-wrapper" ng-repeat="timing in doctor.Timing">
+                        <p class="clinic-timings-day">
+                            {{timing.Day}}</p>
+                        <p class="clinic-timings-session">
+                            {{timing.TIME}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="doctor-profile-data-container">
+            <div class="doc-info-section-wrapper">
+                <div class="doc-info-section-row">
+                    <div class="doc-info-section-column">
+                        <div class="doc-info-section specialties-block">
+                            <h3 class="specialities">
+                               <span class="speciality-label">Specialization</span></h3>
+                            <p class="speciality-row">
+                                {{doctor.Spec}}</p>
+                        </div>
+                        <div class="doc-info-section qualifications-block">
+                            <h3 class="qualifications profile-section-collapsed">
+                               <span class="qualifications-label">Education</span> 
+                            </h3>
+                            <p class="qualifications-row" ng-repeat="qual in doctor.Qualifications.split(',')">{{qual}}</p>
+                            <!--<p class="qualifications-row" ng-repeat="qual in ">{{qual}}</p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

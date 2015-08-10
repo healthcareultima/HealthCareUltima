@@ -1,0 +1,52 @@
+﻿<link href="Styles/DocMod.css" rel="stylesheet" />
+
+<input type="text" id="specs" ng-model="speciality" placeholder="Specialities" />
+<input type="submit" value="Search" ng-click="searchDoc()" />
+
+<div class="docResults">
+  
+    <div class="doclist-row" ng-repeat="doc in selectedDoctors">
+        <div class="docPhoto">
+
+            <img class="doc_avatar" src="Images/People-Doctor-Male-icon.jpg" style="display:inline" />
+
+        </div>
+        <div class="doc-details">
+            <a href="#" class="link doc-name snmokeliftDocLink">
+                <h2>{{doc.Name}}</h2>
+            </a>
+            <p class="doc-qualifications">
+                {{doc.Qualifications}}
+            </p>
+            <p class="doc-specialities">
+                <span>{{doc.Spec}}</span>
+            </p>
+            <p class="doc-clinic-name">
+                <a class="light_grey">
+                    <span>{{doc.Clinic}}</span>
+                </a>
+            </p>
+        </div>
+        <div class="doc-availability-block">
+            <p class="recommend">
+               {{doc.Rating}} <span>Recommends</span>
+            </p>
+            <p class="locality">
+                {{doc.locality}}
+            </p>
+            <p class="fees">
+                {{doc.fee}}
+            </p>
+            <div class="timings">
+               <div ng-repeat="timing in doc.Timing">
+                    <p>
+                        <span class="strong days-timing">{{timing.Day}}</span>
+                        <br />
+                        <span class="hours-timing">{{timing.TIME}}</span>
+                    </p>
+               </div>
+            </div>
+        </div>
+        <input type="button" class="bookToggle" ng-click="setDocService(doc)" value="Book Appointment" />
+    </div>
+</div>

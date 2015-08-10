@@ -1,0 +1,35 @@
+﻿<link rel="Stylesheet" href="Styles/PharmacyService.css" />
+<p>{{message}}</p>
+<div class="checkDelivery">
+    <input type="number" placeholder="We Deliver At" id="pinCode" />
+    <input type="button" class="GeneralButton" value="Check" ng-click="CheckDelivery()" />
+    <div class="Undeliverable" style="display:none">
+        <span>Sorry, Delivery is Not Possible at you Location</span>
+        <div>
+            <input type="button" class="GeneralButton" value="Store Locator" ng-click="LocateStore(this)" />
+        </div>
+    </div>
+    <div class="Deliverable" style="display:none">
+        <span>Delivery available at your location</span>
+    </div>
+</div>
+
+<div class="Order" style="display:none">
+    <input type="button" class="GeneralButton" value="Add New" ng-click="AddNew()" />
+    <input type="button" class="GeneralButton" value="Place Order" ng-click="ProcessOrder()" />
+</div>
+
+<div class="searchDiv" style="display:none">
+    <ul>
+        <li>
+            <input type="text" placeholder="Drug/Generic Name" />
+            <input type="text" placeholder="Qty" />
+            <input type="text" placeholder="Price" />
+        </li>
+    </ul>
+</div>
+<div class="StoreLocator" style="display:none">
+    <input type="number" placeholder="Mention Radius (in Km)" id="radius" ng-blur="InitializeMap()" />    
+    <input type="button" class="GeneralButton" value="Driving" ng-click="ShowRoute()" />
+</div>
+<div id="mapCanvas"></div>

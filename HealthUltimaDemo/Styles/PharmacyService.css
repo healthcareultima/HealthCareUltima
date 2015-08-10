@@ -1,0 +1,42 @@
+﻿.pharmacyWrapper {
+    text-align: center;
+}
+.searchDiv ul li {
+    display: inline-block;
+    margin: 14px 17px 17px 14px;
+    /* You can also add some margins here to make it look prettier */
+    zoom: 1;
+    *display: inline;
+    float: left;
+    /* this fix is needed for IE7- */
+}
+.Deliverable span{
+    color:darkgreen;
+    font-family: 'Times New Roman';
+    font-size: 12px;
+
+}
+
+.Undeliverable span{
+    color:red;
+    font-family: 'Times New Roman';
+    font-size: 12px;
+
+}
+.checkDelivery{
+    margin:auto;
+}
+
+.searchDiv{
+    margin:auto;
+}
+.Order{
+    width:100%;    
+    margin:auto;
+    text-align:center;
+}
+#mapCanvas{   
+    width: 100%;    
+    position: absolute; 
+    height: 400px;
+}

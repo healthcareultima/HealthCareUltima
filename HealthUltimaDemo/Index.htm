@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="Scripts/jquery-latest.js"></script>
+    <script type="text/javascript" src="Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-route.js"></script>    
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+    <script type="text/javascript" src="Scripts/app.js"></script>
+    <script type="text/javascript" src="Scripts/Service/DoctorService.js"></script>
+    <script type="text/javascript" src="Scripts/Controller/TilesController.js"></script>
+    <script type="text/javascript" src="Scripts/Controller/DoctorController.js"></script>
+    <script type="text/javascript" src="Scripts/Controller/SampleCollController.js"></script>
+    <script type="text/javascript" src="Scripts/Controller/EmergencyController.js"></script>
+    <script type="text/javascript" src="Scripts/Controller/AdmissionController.js"></script>
+    <script type="text/javascript" src="Scripts/Controller/PharmacyController.js"></script>
+    <script type="text/javascript" src="Scripts/Controller/OtherController.js"></script>
+    <script type="text/javascript" src="Scripts/Controller/DoctorBookController.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <link rel="stylesheet" href="Styles/jquery-ui.min.css" />
+    <link rel="Stylesheet" href="Styles/MainCSS.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Ultima</title>
+</head>
+
+<body>
+    
+    <div class="wrapper">    
+        <div class="header">            
+            <div class="navigation">  
+                <a href="#"><span id="accountInfo">Welcome Guest</span></a>
+                <a href="#"><span id="CustomerCare">24x7 Support</span></a>
+                <a href="#"><span id="City">Kolkata</span></a>
+            </div>
+        </div>    
+        <div class="push"></div>
+        <div ng-app="HealthApp" class="main">
+            <div ng-view=ng-view>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="#/Landing">Back to Home</a>
+    </div>
+</body>
+</html>
