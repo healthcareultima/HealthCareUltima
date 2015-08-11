@@ -1,4 +1,4 @@
-﻿<link href="Styles/DocMod.css" rel="stylesheet" />
+﻿<link href="Styles/DocMod.css?rev=1.0" rel="stylesheet" />
 <div class="profile-Container">
     <div class="profile-summary">
         <div class="doc_photo">
@@ -88,18 +88,18 @@
     </div>
 </div>
 <div class="suggestions">
-    <table border="0">
+    <table border="0" style="width:240px;">
         <tr ng-repeat="doc in relatedDocs|orderBy:'-Rating'">
-            <td>
+            <td style="padding-top:20%">
                 <div class="doc-list">
                     <div class="doc_photo">
                         <img class="doc_avatar" src="Images/People-Doctor-Male-icon.jpg" style="display: inline;max-height:100px;">
                     </div>
                     <div class="doc-sugg-details">
                         <p>{{doc.Name}}</p>
-                        <p>{{doc.Clinic}}</p>
+                        <p class="clinic-address" style="display:inline-block;margin-left:45%;">{{doc.Clinic}}</p>
                         <p class="recommend" style="padding-top:20%;margin-left:35%;">{{doc.Rating}} <span> Recommendations</span></p>
-                        <input type="button" class="bookToggle" ng-click="setDocService(doc)" style="font:14px;padding:10px 31px;margin-top:0" value="Book Appointment" />
+                        <input type="button" class="bookToggle" ng-click="setDocService(doc)" style="font:14px;padding:8px 21px;margin-top:0" value="Book Appointment" />
                     </div>
                 </div>
             </td>

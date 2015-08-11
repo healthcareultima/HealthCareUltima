@@ -410,7 +410,7 @@ h3.qualifications
 }
 .doc-list {
     height:200px !important;
-    border: 2px solid;
+    width:240px;
     margin-bottom:10px;
     padding:5px;
     text-align:left;
